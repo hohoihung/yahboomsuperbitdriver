@@ -7,12 +7,15 @@ input.onButtonPressed(Button.A, function() {
 input.onButtonPressed(Button.B, function() {
     let _pin = 16
     let myStrip = SuperBit.RGB_Program(_pin)
-    myStrip.showColor(neopixel.colors(NeoPixelColors.Red))
+    myStrip.showColor(neopixel.colors(NeoPixelColors.Green))
 })
 
 basic.forever(function() {
-    TM1650.showSring("1234")
+    basic.showString("1234567")
+    TM1650.clear()
+    basic.pause(2000)
+    TM1650.showSring("4567")
     basic.pause(3000)
-    TM1650.showRunging("abcde", 1000)
+    TM1650.showRunging("doug", 1000)
     basic.pause(5000)
 })
