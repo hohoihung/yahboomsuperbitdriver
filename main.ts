@@ -210,17 +210,33 @@ namespace SuperBit {
      * *****************************************************************
      * @param index
      */
-    //% blockId=SuperBit_RGB_Program block="RGB_Program"
+    
+    //% blockId=SuperBit_RGB_Program block="RGB_Program|%index"
     //% weight=99
     //% blockGap=10
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
-    export function RGB_Program(): neopixel.Strip {
+    export function RGB_Program(index:number): neopixel.Strip {
+        let _pin = 0
+
+        if(index == 12) {
+            _pin = DigitalPin.P12;
+        }
+        else if(index == 16) {
+            _pin = DigitalPin.P16;
+        }
+        else {
+            _pin = DigitalPin.P1;
+        }
 
         if (!yahStrip) {
-            yahStrip = neopixel.create(DigitalPin.P12, 4, NeoPixelMode.RGB);
+            yahStrip = neopixel.create(_pin, 4, NeoPixelMode.RGB);
         }
         return yahStrip;
     }
+/**
+ * *****************************************************************
+ * @param index
+ */
 
     //% blockId=SuperBit_Music block="Music|%index"
     //% weight=98
