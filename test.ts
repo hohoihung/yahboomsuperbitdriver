@@ -11,7 +11,7 @@ input.onButtonPressed(Button.B, function() {
 })
 
 basic.forever(function() {
-    basic.showString("1234567")
+    basic.showString("1234567888")
     TM1650.clear()
     basic.pause(2000)
     TM1650.showSring("4567")
