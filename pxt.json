@@ -5,6 +5,7 @@
         "core": "*",
         "radio": "*",
         "neopixel": "github:lzty634158/pxt-neopixel#71e694ace493be31a0e27f3fd567b7a00dfb5e01",
+        "sonar": "github:zhuning239/sonar",
         "microphone": "*"
     },
     "files": [
